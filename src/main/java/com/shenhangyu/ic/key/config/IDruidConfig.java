@@ -1,18 +1,16 @@
 /**
  * 版权所有©深航渔
  */
-package com.shenhangyu.icard.icardweb.config;
+package com.shenhangyu.ic.key.config;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
-import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.Servlet;
 
 /**
  *描述：

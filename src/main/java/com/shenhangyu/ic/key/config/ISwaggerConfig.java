@@ -1,7 +1,7 @@
 /**
  *版权所有©深航渔
  */
-package com.shenhangyu.icard.icardweb.config;
+package com.shenhangyu.ic.key.config;
 
 
 import org.slf4j.Logger;
@@ -9,8 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-
-import com.shenhangyu.icard.icardweb.controller.CardInfoController;
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -42,7 +40,7 @@ public class ISwaggerConfig {
 				.groupName("深航渔")
 				.apiInfo(getApiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.shenhangyu.icard.icardweb.controller"))//配置扫描的包
+				.apis(RequestHandlerSelectors.basePackage("com.shenhangyu.ic.key.controller"))//配置扫描的包
 				.paths(PathSelectors.any())
 				.build();
 	}
@@ -50,10 +48,10 @@ public class ISwaggerConfig {
 	private ApiInfo getApiInfo(){
 		logger.info("开始重置Swagger配置参数");
 		//作者信息
-		Contact contactInfo = new Contact("shenhangyu","https://github.com/moshenghang","shenhangyu.qq.com");
+		Contact contactInfo = new Contact("shenhangyu","https://github.com/moshenghang/ic-key.git","shenhangyu.qq.com");
 		return new ApiInfoBuilder()
 				.title("云卡管理工程 API接口文档")//文档标题
-				.description("icard-web工程的SwaggerAPI文档")//文档说明
+				.description("ic-key工程的SwaggerAPI文档")//文档说明
 				.contact(contactInfo)//作者信息
 				.termsOfServiceUrl("https://github.com/moshenghang")
 				.version("v1.0.0")
